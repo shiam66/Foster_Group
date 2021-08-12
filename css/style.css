@@ -1,0 +1,290 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;300&display=swap');
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bitter', serif;
+}
+body{
+  max-height: 100vh; max-width: 100%;
+  background: #fff!important;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c2d9e9;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bitter', sans-serif;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+/* Modify the backgorund color */
+.navbar {
+  max-width: 100%;
+  transition: all 0.5s;
+  z-index: 997;
+  background: #fff!important;
+  padding: 20px;
+  /* box-shadow: 0px 2px 5px rgb(0 0 0 / 10%); */
+}
+
+
+/* 
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding: 0px 40px 0px 0px;
+    box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+  }
+  .about-us .row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-img img{
+    width: 80%; height: 350px; border-radius: 5%;
+  }
+}
+@media only screen and(max-width: 780px){
+  #hero {
+    z-index: 1;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+    height: calc(100vh - 60px);
+  }
+  
+  .about-us .about-img img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .about-us .about-text{
+    block-size: inherit;
+  }
+} */
+
+.navbar-nav .nav-item:hover {
+  background-color: rgba(76, 78, 82, 0.4);
+}
+.navbar ul{
+  padding: 15px; 
+}
+
+.navbar a{
+  color: #000 !important;
+}
+.navbar-nav .nav-item:hover {
+  background-color: rgba(76, 78, 82, 0.4);
+}
+
+
+/*-------------------Nav Section End ----------------------------*/
+/*--------------------------------------------------------------
+Hero Section
+--------------------------------------------------------------*/
+
+#hero .container {
+  z-index: 2;
+}
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#hero {
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  background-size:cover;
+  background: url("https://www.albany.edu/sites/default/files/styles/hero_slide_image/public/campus.jpg?itok=KlSVXYRx") center center no-repeat;
+}
+#hero:before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  background: #000; 
+  opacity: 0.7;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+}
+#hero h2 {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+#hero .btn-get-started, .about-us .text a, .research .btn-get-started {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 12px 28px;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+  background: #B8891B !important;
+  text-transform: uppercase;
+}
+#hero .btn-get-started{
+  border-radius: 50px;
+}
+#hero .btn-get-started:hover, .about-us .text a:hover {
+  background: #fff;
+  color: #B8891B;
+  border: 3px solid #B8891B;
+}
+
+
+@media (max-width: 992px) {
+  #hero {
+    height: calc(100vh - 150px);
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+/*-------------------Hero Section End ----------------------------*/
+
+/*--------------------------------------------------------------
+About Section
+--------------------------------------------------------------*/
+.about-us {
+  padding: 10px 0;
+}
+
+.about-us .row .img-fluid{
+  border-radius: 15%; 
+  height: 400px; 
+  max-width: 100%;
+  padding: 15px;
+}
+
+/*-------------------About Section End ----------------------------*/
+
+main{
+  background: #F9F9FB;
+}
+/*--------------------------------------------------------------
+Research Section
+--------------------------------------------------------------*/
+.research{
+  width: 100%;
+  /* max-height: 60vh; */
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  background-size:cover;
+  /* background:#777f85;
+  color: white; */
+}
+
+
+/*--------------------------------------------------------------
+Team Section
+--------------------------------------------------------------*/
+#team{
+  padding: 30px 0;
+  background: #000; opacity: 0.8;
+}
+/* Slider */
+
+.carousel-item::before{
+  content: ""; display: block; position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+.section-header{
+  margin-bottom: 30px;
+  /* background-color: rgb(121, 98, 98); */
+}
+.section-header h2{
+  font-size: 32px;
+  color: #B8891B;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 20px;
+}
+.section-header h2::before{
+  content: "";
+  position: absolute;
+  display: block; width: 50px; height: 3px;
+  background-color: #909394; bottom: 0;
+  left: 0;
+}
+#team .member .member-details{
+  background-color: #CC9900;
+  color: #fff; padding: 15px;
+}
+#team .member .member-details h4{
+  margin-bottom: 2px; font-weight: 600;
+  font-size: 18px;
+}
+#team .member .member-details span{
+  display: block; font-style: italic;
+  font-size: 13px;
+}
+#team .member .member-details .social{
+  margin-top: 10px; 
+}
+#team .member .member-details .social a{
+  margin: 0 5px; 
+}
+/*-------------------Team Section End ----------------------------*/
+
+/*--------------------------------------------------------------
+Contact Section
+--------------------------------------------------------------*/
+.contact-form {
+  background-color: #F9F9FB;
+  color: #000; margin-top: 100px; 
+  padding: 20px;
+}
+.contact-form .section-title{
+  text-align: center; color: #000;
+}
+/*-------------------Contact Section End ----------------------------*/
